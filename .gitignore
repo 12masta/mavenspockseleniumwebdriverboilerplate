@@ -6,6 +6,7 @@ out/test/resources/
 src/main/groovy/
 src/test/java/
 src/test/resources/
+target/
 
 ######################
 # Node
