@@ -10,9 +10,12 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-    public WebDriver driver;
+    private WebDriver driver;
+    private int implicitWaitOnSeconds;
 
-    public WebDriver initialize(String browser) {
+    public WebDriver initialize(String browser, int implicitWaitOnSeconds) {
+        this.implicitWaitOnSeconds = implicitWaitOnSeconds;
+
         if (browser.equalsIgnoreCase("Chrome")) {
             return getChromeDriver();
         }
@@ -29,18 +32,14 @@ public class Driver {
     private WebDriver getChromeDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.manage().window().fullscreen();
+        manageDriverSettings(driver, implicitWaitOnSeconds);
         return driver;
     }
 
     private WebDriver getFirefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.manage().window().fullscreen();
+        manageDriverSettings(driver, implicitWaitOnSeconds);
         return driver;
     }
 
@@ -49,9 +48,13 @@ public class Driver {
         options.ignoreZoomSettings();
         WebDriverManager.iedriver().setup();
         driver = new InternetExplorerDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        manageDriverSettings(driver, implicitWaitOnSeconds);
+        return driver;
+    }
+
+    private void manageDriverSettings(WebDriver driver, int implicitWaitOnSeconds) {
+        driver.manage().timeouts().implicitlyWait(implicitWaitOnSeconds, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.manage().window().fullscreen();
-        return driver;
     }
 }
