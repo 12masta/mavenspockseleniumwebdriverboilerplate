@@ -25,7 +25,7 @@ class BaseSpec extends Specification {
     }
 
     def setupDriver() {
-        driver = new Driver().initialize(browser)
+        driver = new Driver().initialize(browser, 10)
         driver.get(getConfig().url)
     }
 
