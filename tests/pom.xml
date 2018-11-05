@@ -20,6 +20,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.szkolqa</groupId>
+            <artifactId>testframework</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
             <version>1.1-groovy-2.4</version>
@@ -60,7 +66,7 @@
     <build>
         <resources>
             <resource>
-                <directory>${basedir}/src/test/groovy/resources</directory>
+                <directory>${basedir}/src/test/resources/</directory>
             </resource>
         </resources>
         <plugins>
@@ -98,6 +104,7 @@
                     <includes>
                         <include>**/*Spec.java</include> <!-- Yes, .java extension -->
                         <include>**/*Tests.java</include>
+                        <include>**/*Test.java</include>
                     </includes>
                 </configuration>
                 <dependencies>
@@ -121,7 +128,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>${basedir}/src/test/groovy</source>
+                                <source>${basedir}/src/test/groovy/</source>
                             </sources>
                         </configuration>
                     </execution>
