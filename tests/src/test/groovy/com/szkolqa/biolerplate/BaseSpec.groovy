@@ -2,7 +2,8 @@ package com.szkolqa.biolerplate
 
 
 import com.szkolqa.boilerplate.driver.Driver
-import com.szkolqa.boilerplate.driver.listeners.ScreenshotOnFailureListener
+import com.szkolqa.boilerplate.driver.listeners.screenshot.ScreenshotListenerFinder
+import com.szkolqa.boilerplate.driver.listeners.screenshot.ScreenshotOnFailureListener
 import org.openqa.selenium.WebDriver
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -17,7 +18,7 @@ class BaseSpec extends Specification {
 
     def setup() {
         setupDriver()
-        getScreenshotListener().driver = driver
+        activateScreenshotListener()
     }
 
     def cleanup() {
@@ -29,8 +30,8 @@ class BaseSpec extends Specification {
         driver.get(getConfig().url)
     }
 
-    def getScreenshotListener() {
-        this.specificationContext.currentSpec.listeners.find { it instanceof ScreenshotOnFailureListener }
+    def activateScreenshotListener() {
+        ScreenshotListenerFinder.getScreenshotListener(this).setDriver(driver)
     }
 
     def getConfig() {

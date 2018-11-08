@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.driver.listeners;
+package com.szkolqa.boilerplate.driver.listeners.screenshot;
 
 import org.spockframework.runtime.extension.IGlobalExtension;
 import org.spockframework.runtime.model.SpecInfo;
