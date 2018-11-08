@@ -77,34 +77,11 @@
             </dependency>
 
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.5</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>1.7.5</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.anotherchrisberry</groupId>
                 <artifactId>spock-retry</artifactId>
                 <version>0.6.4</version>
             </dependency>
 
-            <dependency>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>1.1.1</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-spock</artifactId>
-                <version>2.7.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
