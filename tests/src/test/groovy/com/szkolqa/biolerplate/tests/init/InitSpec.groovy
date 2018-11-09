@@ -1,6 +1,6 @@
-package com.szkolqa.biolerplate.init
+package com.szkolqa.biolerplate.tests.init
 
-import com.szkolqa.biolerplate.BaseSpec
+import com.szkolqa.biolerplate.tests.BaseSpec
 import io.qameta.allure.Epic
 import io.qameta.allure.Feature
 

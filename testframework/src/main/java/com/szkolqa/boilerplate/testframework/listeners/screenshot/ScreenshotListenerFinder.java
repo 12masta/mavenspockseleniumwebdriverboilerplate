@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.driver.listeners.screenshot;
+package com.szkolqa.boilerplate.testframework.listeners.screenshot;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

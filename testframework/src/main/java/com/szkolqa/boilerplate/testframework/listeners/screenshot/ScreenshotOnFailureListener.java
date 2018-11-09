@@ -1,13 +1,16 @@
-package com.szkolqa.boilerplate.driver.listeners;
+package com.szkolqa.boilerplate.testframework.listeners.screenshot;
 
-import com.szkolqa.boilerplate.driver.ScreenshotManager;
 import org.openqa.selenium.WebDriver;
 import org.spockframework.runtime.AbstractRunListener;
+import org.spockframework.runtime.IRunListener;
 import org.spockframework.runtime.model.ErrorInfo;
 
-public class ScreenshotOnFailureListener extends AbstractRunListener {
-    //TODO: take care about proper set
-    public WebDriver driver;
+public class ScreenshotOnFailureListener extends AbstractRunListener implements IRunListener {
+    private WebDriver driver;
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void error(ErrorInfo error) {
         ScreenshotManager screenshot = new ScreenshotManager(driver);

@@ -1,4 +1,4 @@
-package com.szkolqa.biolerplate.config
+package com.szkolqa.biolerplate.tests.config
 
 import io.qameta.allure.Epic
 import io.qameta.allure.Feature

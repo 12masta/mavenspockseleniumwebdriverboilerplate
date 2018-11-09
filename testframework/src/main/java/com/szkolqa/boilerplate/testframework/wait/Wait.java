@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.driver;
+package com.szkolqa.boilerplate.testframework.wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

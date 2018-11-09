@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.driver;
+package com.szkolqa.boilerplate.testframework.url;
 
 public interface UrlResolver {
     void goToRelativeUrl(String relativeUrl);

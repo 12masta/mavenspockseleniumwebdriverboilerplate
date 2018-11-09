@@ -1,9 +1,8 @@
-package com.szkolqa.biolerplate
+package com.szkolqa.biolerplate.tests
 
 
-import com.szkolqa.boilerplate.driver.Driver
-import com.szkolqa.boilerplate.driver.listeners.screenshot.ScreenshotListenerFinder
-import com.szkolqa.boilerplate.driver.listeners.screenshot.ScreenshotOnFailureListener
+import com.szkolqa.boilerplate.testframework.driver.Driver
+import com.szkolqa.boilerplate.testframework.listeners.screenshot.ScreenshotListenerFinder
 import org.openqa.selenium.WebDriver
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
