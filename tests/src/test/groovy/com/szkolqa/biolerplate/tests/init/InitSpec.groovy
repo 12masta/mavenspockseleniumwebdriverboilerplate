@@ -16,4 +16,14 @@ class InitSpec extends BaseSpec {
         expect:
         driver.currentUrl == 'failing tests'
     }
+
+    def 'send message'(){
+        when: "user provide correct email"
+        homePage.fillEmailInput("example@gmail.com")
+        and: "provide message"
+        homePage.fillMessageInput("Hello Marcin")
+
+        then: "success notification has been shown"
+        homePage.isSuccessNotiifcationDisplayed()
+    }
 }

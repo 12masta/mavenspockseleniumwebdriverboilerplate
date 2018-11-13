@@ -1,5 +1,6 @@
 package com.szkolqa.boilerplate.testframework.listeners.screenshot.failure;
 
+import com.szkolqa.boilerplate.testframework.listeners.screenshot.ScreenshotTaker;
 import org.openqa.selenium.WebDriver;
 import org.spockframework.runtime.AbstractRunListener;
 import org.spockframework.runtime.IRunListener;
@@ -13,7 +14,7 @@ public class ScreenshotOnFailureListener extends AbstractRunListener implements 
     }
 
     public void error(ErrorInfo error) {
-        ScreenshotManager screenshot = new ScreenshotManager(driver);
+        ScreenshotTaker screenshot = new ScreenshotTaker(driver);
         String className = error.getMethod().getParent().getFilename();
         String methodName = error.getMethod().getName();
 

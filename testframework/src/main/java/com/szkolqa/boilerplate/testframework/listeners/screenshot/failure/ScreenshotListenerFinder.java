@@ -10,7 +10,7 @@ import java.util.Optional;
 public class ScreenshotListenerFinder {
     private static Logger logger = LoggerFactory.getLogger(ScreenshotListenerFinder.class);
 
-    public static ScreenshotOnFailureListener getScreenshotListener(Specification specification) {
+    public static ScreenshotOnFailureListener getListener(Specification specification) {
         Optional<IRunListener> optionalScreenshotListener = specification.getSpecificationContext()
                 .getCurrentSpec()
                 .getListeners()

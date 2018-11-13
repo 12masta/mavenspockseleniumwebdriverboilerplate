@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.testframework.listeners.screenshot.failure;
+package com.szkolqa.boilerplate.testframework.listeners.screenshot;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -12,14 +12,13 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.time.LocalTime;
 
-public class ScreenshotManager {
+public class ScreenshotTaker {
 
-    private static Logger logger = LoggerFactory.getLogger(ScreenshotManager.class);
+    private static Logger logger = LoggerFactory.getLogger(ScreenshotTaker.class);
     private LocalTime timestamp = LocalTime.now();
-
     private WebDriver driver;
 
-    public ScreenshotManager(WebDriver driver) {
+    public ScreenshotTaker(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -45,7 +44,7 @@ public class ScreenshotManager {
 
     @Attachment
     @Step("Make screen shot of results page")
-    public byte[] screenshot(TakesScreenshot screenshotTakingDriver) {
+    private byte[] screenshot(TakesScreenshot screenshotTakingDriver) {
         return screenshotTakingDriver.getScreenshotAs(OutputType.BYTES);
     }
 }
