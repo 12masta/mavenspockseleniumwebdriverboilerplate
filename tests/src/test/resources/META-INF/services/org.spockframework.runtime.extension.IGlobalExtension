@@ -1,1 +1,1 @@
-com.szkolqa.boilerplate.testframework.listeners.screenshot.ScreenshotOnFailureExtension
+com.szkolqa.boilerplate.testframework.listeners.screenshot.failure.ScreenshotOnFailureExtension

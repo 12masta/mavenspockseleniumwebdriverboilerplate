@@ -2,7 +2,7 @@ package com.szkolqa.biolerplate.tests
 
 import com.anotherchrisberry.spock.extensions.retry.RetryOnFailure
 import com.szkolqa.boilerplate.testframework.driver.Driver
-import com.szkolqa.boilerplate.testframework.listeners.screenshot.ScreenshotListenerFinder
+import com.szkolqa.boilerplate.testframework.listeners.screenshot.failure.ScreenshotListenerFinder
 import org.openqa.selenium.WebDriver
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

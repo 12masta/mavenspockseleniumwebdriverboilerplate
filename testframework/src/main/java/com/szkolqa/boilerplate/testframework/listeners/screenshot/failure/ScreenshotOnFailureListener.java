@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.testframework.listeners.screenshot;
+package com.szkolqa.boilerplate.testframework.listeners.screenshot.failure;
 
 import org.openqa.selenium.WebDriver;
 import org.spockframework.runtime.AbstractRunListener;

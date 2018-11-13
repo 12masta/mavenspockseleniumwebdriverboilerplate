@@ -1,4 +1,4 @@
-package com.szkolqa.boilerplate.testframework.listeners.screenshot;
+package com.szkolqa.boilerplate.testframework.listeners.screenshot.failure;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
